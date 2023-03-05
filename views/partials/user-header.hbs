@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="  width: 100%; background-color: #131921; z-index: 1;">
+
+    <a class="navbar-brand pb-2" href="/">
+        <img src="images/logo.jpeg" width="30" height="30" alt="" style="border-radius: 50%;">
+    </a>
+    <button class="navbar-toggler btn-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        style="border-color: #04AA6D; background-color: aliceblue;">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style="width: 100%;">
+            <li class="nav-item active">
+                <a class="nav-link" href="/" style="color: white;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/carts" style="color: white;">Carts</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="color: white;">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="/order" style="color: white;">Orders</a>
+            </li>
+            <form class="form-inline my-2 my-lg-0 ml-auto">
+                <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search"
+                    style=" height: 30px;">
+                <button class="btn btn-outline-primary mr-sm-2 my-2 my-sm-0 pt-0 pb-4" type="submit"
+                    style="height: 30px;">Search</button>
+            </form>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle my-2 pt-0 pb-4" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    style="height: 30px; width: 100px;">
+                    {{#if user}}
+                    {{user.Name}}
+                    {{else}}
+                    Account
+                    {{/if}}
+                </button>
+                {{#if user}}
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                    <a class="dropdown-item" href="/logout">Logout</a>
+
+                </div>
+                {{else}}
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/login">Login</a>
+                    <a class="dropdown-item" href="/sinup">Sinup</a>
+
+                </div>
+                {{/if}}
+            </div>
+        </ul>
+
+    </div>
+</nav>

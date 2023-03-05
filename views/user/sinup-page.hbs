@@ -1,0 +1,51 @@
+<div class="background-image">
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-md-12 " style="margin-top: 8%;">
+                <form action="/sinup" method="post" class="m-auto p-5"
+                    style="width: 60%; border-radius: 20px; box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;">
+
+                    <h1 class="p-auto" style="text-align: center;"><b>Create Your <p
+                                style="display: inline; color: blueviolet;">Account...</p></b></h1>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Name</label>
+                        <input type="text" name="Name" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Enter Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" name="Email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" name="Password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Password">
+                    </div>
+
+                    <div class="form-check" style="text-align: center;">
+
+                        <a href="/login" class="">I already have an account</a>
+
+                    </div>
+                    <button type="submit" class="btn btn-success mt-2" style="width: 100%;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .background-image {
+        background-image: url('/images/sinup.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+    }
+</style>

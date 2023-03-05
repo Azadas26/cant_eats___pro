@@ -1,0 +1,39 @@
+<div>
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <h1 class="m-auto" style="font-family: 'georgia';">To Get Your Favourite Food...</h1>
+        </div>
+        <div class="row">
+
+            {{#if product}}
+            <div class="col-md-4 p-5" style="">
+                <div class="card bg-dark text-white img-fluid"
+                    style="height: 40rem; width: 30em; border-radius: 20px; border-color: white; box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;">
+                    <img class="card-img " src="/Admin_image/{{product._id}}.jpg" alt="Card image"
+                        style="width: 100%; height: 100%; border-radius: 20px; border-color: white;">
+                </div>
+            </div>
+            <div class="col-md-8 p-5">
+                <div class="card bg-light text-dark"
+                    style="height: auto;  border-radius: 20px; border-color: white; box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;">
+                    <div class="card-img-overlay p-5">
+                        <p class="card-title mt-1"
+                            style="text-align: center;font-size: 50px; font-family: 'georgia';text-shadow: 2px 2px #FF0000;">
+                            {{product.name}}...</p>
+                        <p class="card-text mt-5 " style="text-align: center; font-size: 30px;">
+                            {{product.discription}}</p>
+                        <p class="card-text mt-5" style="text-align: left; font-size: 25px;">Price : {{product.price}} ₹
+                        </p>
+                        <a href="/cart" class="btn btn-success">Add To Cart</a>
+
+                        <a href="/buy" class="btn btn-success ml-3">By_Now</a>
+
+                    </div>
+                </div>
+            </div>
+            {{else}}
+
+            {{/if}}
+        </div>
+    </div>
+</div>
