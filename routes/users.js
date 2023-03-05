@@ -136,9 +136,8 @@ router.get('/cart', this.common, (req, res) => {
       //   var cartpro = product.pro
       //   res.render('./user/carted-page', { admin: false ,cartpro})
       // })
-      Userdatabase.Get_allcart().then((pro)=>
-      {
-        var user= req.session.user
+      Userdatabase.Get_allcart().then((pro) => {
+        var user = req.session.user
         res.redirect('/carts')
       })
 
@@ -149,30 +148,25 @@ router.get('/cart', this.common, (req, res) => {
 
 })
 
-router.get('/carts',this.common,(req,res)=>
-{
+router.get('/carts', this.common, (req, res) => {
   var user = req.session.user
-  Userdatabase.Get_allcart().then((pro)=>
-  {
+  Userdatabase.Get_allcart().then((pro) => {
     res.render('./user/carted-page', { admin: false, pro, user })
   })
 
-  
+
 
 })
 
-router.get('/remove',(req,res)=>
-{
-     Userdatabase.Delete_cart(req.query.id).then((data)=>
-     {
-       res.redirect('/carts')
-     })
-}) 
+router.get('/remove', (req, res) => {
+  Userdatabase.Delete_cart(req.query.id).then((data) => {
+    res.redirect('/carts')
+  })
+})
 
-router.get('/buy',(req,res)=>
-{
-   var user = req.session.user
-   res.render('./payments/pay-card',{admin:false,user})
+router.get('/buy', (req, res) => {
+  var user = req.session.user
+  res.render('./payments/pay-card', { admin: false, user })
 })
 
 module.exports = router;
